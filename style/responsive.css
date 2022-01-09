@@ -1,0 +1,24 @@
+@media screen and (max-width: 800px) {
+  header .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .texto #paragrafo {
+    display: none;
+  }
+}
+
+.botao {
+  margin-top: 5px;
+  width: 190px;
+}
+
+@media screen and (min-width: 1000px) {
+  .descricao {
+    width: 50%;
+  }
+  /** .owl-item:hover {
+    transition: all 0.5s;
+    border: 5px solid transparent;
+  }**/
+}

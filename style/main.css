@@ -1,0 +1,257 @@
+:root {
+  --vermelho: #e50914;
+  --preta: #141414;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+/*elementos base*/
+body {
+  background: var(--preta);
+  font-family: "Arial", Times, serif;
+  color: white;
+}
+header {
+  background: var(--preta);
+  position: sticky;
+  top: 0;
+}
+header .container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  margin-left: 5px;
+  color: var(--vermelho);
+  font-family: "Arial Black";
+  font-size: 30px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #aaa;
+  margin-right: 10px;
+}
+
+header nav a:hover {
+  color: #fff;
+}
+/*filme principal*/
+.filme-principal {
+  font-size: 15px;
+  text-align: justify;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+    url("/img/spider-man.jpg");
+  height: 400px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.filme-principal .aranha {
+  margin-top: -5%;
+  height: 150px;
+  display: flex;
+  background-size: cover;
+}
+.filme-principal .descricao {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.informacao {
+  /* botao  */
+  background: transparent;
+  background-color: rgba(87, 87, 87, 0.5);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 30px;
+  margin-right: 15px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+.assistir {
+  /* botao */
+  background: transparent;
+  background-color: rgba(87, 87, 87, 0.5);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 30px;
+  margin-right: 1px;
+  margin-left: 60px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+.botoes .informacao:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.botoes .assistir:hover {
+  background-color: transparent;
+  color: white;
+}
+.botao i {
+  margin-right: 8px;
+}
+.container {
+  margin-left: 20px;
+}
+.filme-principal .container {
+  width: 70%;
+}
+.box-filme {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.owl-carousel {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.owl-stage {
+  width: 100px;
+  height: 10px;
+}
+.item {
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.item:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+h3 {
+  cursor: pointer;
+  display: block;
+  color: var(--vermelho);
+}
+h3:hover {
+  color: rgba(255, 0, 0, 0.301);
+}
+
+/* Modal */
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.modal-container.mostrar {
+  display: flex;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 60px, 0);
+    /* transform: translateY(80);*/
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    /*  transform: translateY(0);*/
+  }
+}
+
+.mostrar .modal {
+  animation-name: slide;
+  animation: modal 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.modal {
+  background: rgb(7, 3, 3);
+  width: 60%;
+  min-width: 300px;
+  padding: 60px;
+  border: 1px solid rgb(53, 7, 7);
+}
+
+.fechar {
+  position: fixed;
+  font-size: 1.2em;
+  top: -20px;
+  left: -20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid rgb(53, 7, 7);
+  background: rgb(53, 7, 7);
+  color: white;
+  font-family: "Arial", Helvetica, sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 4px 0 rgba(141, 52, 52, 0.3); /* sombra  */
+}
+.texto {
+  position: static;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+}
+.relevante {
+  color: #46d369;
+  display: inline-block;
+}
+.ano {
+  color: white;
+  display: inline-block;
+}
+
+.texto #paragrafo {
+  position: absolute;
+  right: 60px;
+  width: 300px;
+}
+.texto #paragrafo2 {
+  width: 350px;
+}
+.video-container {
+  width: 50vw;
+  height: 50vh;
+}
+.iframe {
+  width: 100vw;
+  height: 100vh;
+}
+
+iframe {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 50vw;
+  height: 50vh;
+  border: none;
+  transform: translate(-50%, -50%);
+}
+footer#rodape p {
+  padding: 15px;
+  text-align: center;
+}
+footer#rodape a {
+  color: var(--vermelho);
+  font-size: 15px;
+}
